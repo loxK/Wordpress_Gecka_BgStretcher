@@ -1,10 +1,12 @@
 /*
 	Background Stretcher jQuery Plugin
-	© 2009 ajaxBlender.com
+	Â© 2009 ajaxBlender.com
 	For any questions please visit www.ajaxblender.com 
 	or email us at support@ajaxblender.com
 	
-	Version: 1.2
+	Modified by Gecka - http://gecka-apps.com
+	
+	Version: 1.2.1.gk
 */
 
 ;(function($){
@@ -101,7 +103,7 @@
            clearTimeout(_bgStretcherTm);
            _bgStretcherTm = null;
        }
-	}
+	};
 	
 	$.fn.bgStretcher.pause = function(){
 	   _bgStretcherPause = true;
@@ -149,3 +151,4 @@
 	};
 	$.fn.bgStretcher.settings = {};
 })(jQuery);
+
