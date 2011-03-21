@@ -122,5 +122,5 @@ function _stretched_bg_cb ($options) {
 /**
  *@deprecated use add_stretched_background
  */
-function add_streched_background ($options='') { add_stretched_background($options)} // bad typo, kept for compativbility
+function add_streched_background ($options='') { add_stretched_background($options); } // bad typo, kept for compativbility
 
