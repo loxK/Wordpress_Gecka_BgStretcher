@@ -40,7 +40,7 @@ function bgstretcher_plugins_loaded() {
 }    
 add_action('plugins_loaded', 'bgstretcher_plugins_loaded');
 
-function add_streched_background ($options='') {
+function add_stretched_background ($options='') {
     
     // options
     $defaults =  array( 'imageContainer' => 'bgstretcher',
@@ -118,3 +118,9 @@ function _stretched_bg_cb ($options) {
 <?php
     
 }
+
+/**
+ *@deprecated use add_stretched_background
+ */
+function add_streched_background ($options='') { add_stretched_background($options)} // bad typo, kept for compativbility
+
