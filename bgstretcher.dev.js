@@ -108,11 +108,20 @@
 	   $.fn.bgStretcher._clearTimeout();
 	};
 	
-	$.fn.bgStretcher.slideShow = function(){
+	$.fn.bgStretcher.next = function(){
+       $.fn.bgStretcher.slideShow ();
+	};
+	
+	$.fn.bgStretcher.previous = function(){
+       $.fn.bgStretcher.slideShow (1);
+	};
+	
+	$.fn.bgStretcher.slideShow = function(rev){
 		var current = $(containerStr + ' LI.bgs-current');
-		var next = current.next();
+		var next = rev != 1 ? current.next() : current.prev();
+		
 		if(!next.length){
-			next = $(containerStr + ' LI:first');
+			next = rev != 1 ? $(containerStr + ' LI:first') : $(containerStr + ' LI:last');
 		}
 		
 		$(containerStr + ' LI').removeClass('bgs-current');
